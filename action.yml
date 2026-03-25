@@ -1,4 +1,4 @@
-name: ghasec
+name: ghasec Action
 description: Run ghasec to catch security risks in your GitHub Actions workflows
 
 branding:
