@@ -1,0 +1,50 @@
+name: ghasec
+description: Run ghasec to catch security risks in your GitHub Actions workflows
+
+branding:
+  icon: shield
+  color: red
+
+inputs:
+  version:
+    description: "Version of ghasec to install (e.g., X.Y.Z, vX.Y.Z, or latest)"
+    required: false
+    default: "latest"
+  token:
+    description: "GitHub token for API requests (to avoid rate limiting)"
+    required: false
+    default: ${{ github.token }}
+  online:
+    description: "Enable rules that require network access"
+    required: false
+    default: "false"
+  args:
+    description: "Additional arguments to pass to ghasec"
+    required: false
+    default: ""
+
+runs:
+  using: composite
+  steps:
+    - name: Install ghasec
+      uses: koki-develop/setup-ghasec@45b17fe3cd6ffd5eeae07fb3255b169888e90c6c # v1.0.0
+      with:
+        version: ${{ inputs.version }}
+        token: ${{ inputs.token }}
+
+    - name: Run ghasec
+      shell: bash
+      env:
+        GITHUB_TOKEN: ${{ inputs.token }}
+        INPUT_ONLINE: ${{ inputs.online }}
+        INPUT_ARGS: ${{ inputs.args }}
+      run: |
+        args=(--format github-actions)
+        if [ "$INPUT_ONLINE" = "true" ]; then
+          args+=(--online)
+        fi
+        if [ -n "$INPUT_ARGS" ]; then
+          # shellcheck disable=SC2206
+          args+=($INPUT_ARGS)
+        fi
+        ghasec "${args[@]}"
