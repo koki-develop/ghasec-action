@@ -10,7 +10,7 @@ inputs:
     description: "Version of ghasec to install (e.g., X.Y.Z, vX.Y.Z, or latest)"
     required: false
     default: "latest"
-  token:
+  github-token:
     description: "GitHub token for API requests (to avoid rate limiting)"
     required: false
     default: ${{ github.token }}
@@ -35,7 +35,7 @@ runs:
     - name: Run ghasec
       shell: bash
       env:
-        GITHUB_TOKEN: ${{ inputs.token }}
+        GITHUB_TOKEN: ${{ inputs.github-token }}
         INPUT_ONLINE: ${{ inputs.online }}
         INPUT_ARGS: ${{ inputs.args }}
       run: |
