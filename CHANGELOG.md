@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/koki-develop/ghasec-action/compare/v1.0.0...v1.0.1) (2026-03-26)
+
+
+### Patches
+
+* Rename token -&gt; github-token ([0217711](https://github.com/koki-develop/ghasec-action/commit/0217711ba35b1a415b8b9b115b3ee9490a328858))
+
 ## 1.0.0 (2026-03-25)
 
 
