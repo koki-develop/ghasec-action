@@ -15,7 +15,7 @@ A GitHub Action to run [ghasec](https://github.com/koki-develop/ghasec), a secur
 | Name | Description | Default |
 | --- | --- | --- |
 | `version` | Version of ghasec to install (e.g. `X.Y.Z`, `vX.Y.Z`, or `latest`) | `latest` |
-| `token` | GitHub token for API requests (to avoid rate limiting) | `${{ github.token }}` |
+| `github-token` | GitHub token for API requests (to avoid rate limiting) | `${{ github.token }}` |
 | `online` | Enable rules that require network access | `false` |
 | `args` | Additional arguments to pass to ghasec | |
 
