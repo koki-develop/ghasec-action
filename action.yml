@@ -38,6 +38,8 @@ runs:
         GITHUB_TOKEN: ${{ inputs.github-token }}
         INPUT_ONLINE: ${{ inputs.online }}
         INPUT_ARGS: ${{ inputs.args }}
+        GHASEC_DISABLE_OFFLINE_WARNING: true
+        GHASEC_DISABLE_UPDATE_CHECK: true
       run: |
         args=(--format github-actions)
         if [ "$INPUT_ONLINE" = "true" ]; then
