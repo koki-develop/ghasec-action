@@ -6,7 +6,7 @@ A GitHub Action to run [ghasec](https://github.com/koki-develop/ghasec), a secur
 
 <!-- x-release-please-start-version -->
 ```yaml
-- uses: koki-develop/ghasec-action@v1.0.1
+- uses: koki-develop/ghasec-action@v1.0.2
 ```
 <!-- x-release-please-end -->
 
@@ -35,7 +35,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - uses: koki-develop/ghasec-action@v1.0.1
+      - uses: koki-develop/ghasec-action@v1.0.2
 ```
 <!-- x-release-please-end -->
 

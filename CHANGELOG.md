@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/koki-develop/ghasec-action/compare/v1.0.1...v1.0.2) (2026-03-27)
+
+
+### Patches
+
+* Disable offline warning and update check ([3089d48](https://github.com/koki-develop/ghasec-action/commit/3089d4803d84fc022e3c393e758729a7b972863e))
+
 ## [1.0.1](https://github.com/koki-develop/ghasec-action/compare/v1.0.0...v1.0.1) (2026-03-26)
 
 
