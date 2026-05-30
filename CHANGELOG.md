@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/koki-develop/ghasec-action/compare/v1.1.0...v1.1.1) (2026-05-30)
+
+
+### Patches
+
+* Update action pin hashes to v1.0.1 ([bfa138f](https://github.com/koki-develop/ghasec-action/commit/bfa138ff4cc675fdf080f2c36f3a78608e250e50))
+
 ## [1.1.0](https://github.com/koki-develop/ghasec-action/compare/v1.0.2...v1.1.0) (2026-05-30)
 
 
