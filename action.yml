@@ -18,6 +18,10 @@ inputs:
     description: "Enable rules that require network access"
     required: false
     default: "false"
+  install-shellcheck:
+    description: "Install ShellCheck so the shellcheck rule can run"
+    required: false
+    default: "true"
   args:
     description: "Additional arguments to pass to ghasec"
     required: false
@@ -30,7 +34,14 @@ runs:
       uses: koki-develop/setup-ghasec@45b17fe3cd6ffd5eeae07fb3255b169888e90c6c # v1.0.0
       with:
         version: ${{ inputs.version }}
-        token: ${{ inputs.token }}
+        token: ${{ inputs.github-token }}
+
+    - name: Install ShellCheck
+      if: ${{ inputs.install-shellcheck == 'true' }}
+      uses: koki-develop/setup-shellcheck@254ace0b187c94dd3187780eae6415b0a19df5b8 # v1.0.0
+      with:
+        version: latest
+        token: ${{ inputs.github-token }}
 
     - name: Run ghasec
       shell: bash

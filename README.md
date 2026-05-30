@@ -17,6 +17,7 @@ A GitHub Action to run [ghasec](https://github.com/koki-develop/ghasec), a secur
 | `version` | Version of ghasec to install (e.g. `X.Y.Z`, `vX.Y.Z`, or `latest`) | `latest` |
 | `github-token` | GitHub token for API requests (to avoid rate limiting) | `${{ github.token }}` |
 | `online` | Enable rules that require network access | `false` |
+| `install-shellcheck` | Install ShellCheck so the shellcheck rule can run | `true` |
 | `args` | Additional arguments to pass to ghasec | |
 
 ### Example
