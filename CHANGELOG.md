@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/koki-develop/ghasec-action/compare/v1.0.2...v1.1.0) (2026-05-30)
+
+
+### Features
+
+* Add install-shellcheck input to install ShellCheck ([346e0e2](https://github.com/koki-develop/ghasec-action/commit/346e0e267a894c24686d751749956f751f46c6e2))
+
 ## [1.0.2](https://github.com/koki-develop/ghasec-action/compare/v1.0.1...v1.0.2) (2026-03-27)
 
 
