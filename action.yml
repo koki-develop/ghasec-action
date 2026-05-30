@@ -31,14 +31,14 @@ runs:
   using: composite
   steps:
     - name: Install ghasec
-      uses: koki-develop/setup-ghasec@45b17fe3cd6ffd5eeae07fb3255b169888e90c6c # v1.0.0
+      uses: koki-develop/setup-ghasec@dcd08c7ea5af04eb641f695c8169e3efb0c22b32 # v1.0.1
       with:
         version: ${{ inputs.version }}
         token: ${{ inputs.github-token }}
 
     - name: Install ShellCheck
       if: ${{ inputs.install-shellcheck == 'true' }}
-      uses: koki-develop/setup-shellcheck@254ace0b187c94dd3187780eae6415b0a19df5b8 # v1.0.0
+      uses: koki-develop/setup-shellcheck@234e259783e191c1797af28ad94cd1125e1ed8af # v1.0.1
       with:
         version: latest
         token: ${{ inputs.github-token }}
