@@ -38,7 +38,7 @@ runs:
 
     - name: Install ShellCheck
       if: ${{ inputs.install-shellcheck == 'true' }}
-      uses: koki-develop/setup-shellcheck@234e259783e191c1797af28ad94cd1125e1ed8af # v1.0.1
+      uses: koki-develop/setup-shellcheck@85374637e5ec692980a3bdfbee58f14ed984a740 # v1.0.2
       with:
         version: latest
         token: ${{ inputs.github-token }}
